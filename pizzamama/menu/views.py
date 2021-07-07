@@ -6,7 +6,7 @@ from .models import Pizza
 
 # / menu
 def index(request):
-    pizzas = Pizza.objects.all()
+    pizzas = Pizza.objects.all().order_by('prix')
     # pizzas_names_and_prices = [pizza.nom + " : " + str(pizza.prix) + " €" for pizza in pizzas]
     # pizzas_names_and_prices_str = ", ".join(pizzas_names_and_prices)
     # return HttpResponse("Les pizzas : " + pizzas_names_and_prices_str)
